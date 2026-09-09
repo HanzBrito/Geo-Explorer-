@@ -1,0 +1,139 @@
+/* ============================================================
+   GEO-EXPLORER — Responsividade
+   ============================================================ */
+
+/* --- Breakpoints usados:
+   xs:  < 480px
+   sm:  < 640px
+   md:  < 768px
+   lg:  < 1024px
+   xl:  ≥ 1200px
+   --------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .header-inner { padding: .75rem 1rem; gap: 1rem; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile-landscape / Tablet pequeno */
+@media (max-width: 768px) {
+  /* Header: oculta nav e mostra hamburger */
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    flex-direction: column;
+    gap: .25rem;
+    z-index: 99;
+    box-shadow: var(--shadow);
+  }
+  .main-nav.open { display: flex; }
+  .main-nav a    { padding: .65rem 1rem; border-radius: var(--radius); }
+
+  .hamburger { display: flex; }
+
+  .header-user .user-btn span:not(.chevron) { display: none; }
+
+  /* Página */
+  .main-content { padding: 1.25rem 0; }
+
+  .container { padding-inline: 1rem; }
+
+  .page-header { flex-direction: column; align-items: flex-start; }
+  .page-title  { font-size: 1.25rem; }
+
+  /* Tabelas — scroll horizontal */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table       { min-width: 540px; }
+
+  /* Cards */
+  .card-header { flex-direction: column; align-items: flex-start; }
+
+  /* Form */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Stat */
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Certificado */
+  .certificado-wrapper { padding: 2rem 1.5rem; }
+  .cert-assinaturas    { flex-direction: column; gap: 2rem; align-items: center; }
+
+  /* User menu: dropdown vira modal overlay */
+  .user-dropdown {
+    position: fixed;
+    top: 58px;
+    right: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+
+  .stats-grid { grid-template-columns: 1fr; }
+
+  .btn    { padding: .5rem 1rem; font-size: .85rem; }
+  .btn-lg { padding: .65rem 1.25rem; font-size: .95rem; }
+
+  .logo { font-size: 1.1rem; }
+
+  .header-user .btn { display: none; } /* Oculta botões de login/cadastro no topo em mobile */
+  /* Mantém somente o hamburger */
+
+  /* Certificado */
+  .cert-title { font-size: 1.4rem; }
+  .cert-name  { font-size: 1.3rem; }
+
+  /* Tabela — ainda menor */
+  table { font-size: .8rem; }
+  thead th, tbody td { padding: .6rem .75rem; }
+}
+
+/* Print — para impressão do certificado */
+@media print {
+  .site-header,
+  .site-footer,
+  .main-nav,
+  .btn,
+  .no-print { display: none !important; }
+
+  body { background: #fff; }
+  .certificado-wrapper {
+    border: 2px solid #000;
+    padding: 3rem 2rem;
+    margin: 0;
+    max-width: 100%;
+  }
+  .certificado-wrapper::before { border-color: #555; }
+  .cert-title { color: #000; }
+}
+
+/* Utilitário */
+.hide-mobile  { }
+.show-mobile  { display: none; }
+
+@media (max-width: 640px) {
+  .hide-mobile  { display: none; }
+  .show-mobile  { display: block; }
+}
+
+/* Grid helpers */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+
+@media (max-width: 900px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+}

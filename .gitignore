@@ -1,0 +1,33 @@
+# Dependências Node.js (MCP Server)
+node_modules/
+mcp-server/node_modules/
+mcp-server/build/
+
+# Uploads de usuários (fotos de perfil, etc.)
+assets/uploads/avatars/*
+!assets/uploads/avatars/.gitkeep
+
+# Arquivos de configuração com dados sensíveis
+# (copie config/database.example.php e preencha localmente)
+# config/database.php  ← descomente se quiser proteger
+
+# Logs
+*.log
+logs/
+
+# Cache e temporários
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.production

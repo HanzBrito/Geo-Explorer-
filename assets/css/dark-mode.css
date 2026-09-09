@@ -1,0 +1,159 @@
+/* ============================================================
+   GEO-EXPLORER — Modo Escuro
+   Ativado via [data-theme="escuro"] no elemento <html>
+   ============================================================ */
+
+[data-theme="escuro"] {
+  --bg-body:    #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface2:#263449;
+  --bg-header:  #1e293b;
+  --bg-footer:  #0a1120;
+
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+
+  --border:       #334155;
+  --border-focus: #3b82f6;
+
+  --color-primary-light: rgba(37,99,235,.2);
+}
+
+/* Header no modo escuro */
+[data-theme="escuro"] .site-header {
+  border-bottom-color: #334155;
+}
+
+/* Cards */
+[data-theme="escuro"] .card {
+  border-color: #334155;
+}
+
+[data-theme="escuro"] .card-header,
+[data-theme="escuro"] .card-footer {
+  border-color: #334155;
+  background: #263449;
+}
+
+/* Tabelas */
+[data-theme="escuro"] thead th {
+  background: #263449;
+  border-bottom-color: #334155;
+}
+[data-theme="escuro"] tbody tr {
+  border-bottom-color: #334155;
+}
+[data-theme="escuro"] tbody tr:hover {
+  background: #263449;
+}
+
+/* Formulários */
+[data-theme="escuro"] input[type="text"],
+[data-theme="escuro"] input[type="email"],
+[data-theme="escuro"] input[type="password"],
+[data-theme="escuro"] input[type="date"],
+[data-theme="escuro"] input[type="number"],
+[data-theme="escuro"] input[type="url"],
+[data-theme="escuro"] select,
+[data-theme="escuro"] textarea {
+  background: #263449;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+[data-theme="escuro"] input::placeholder,
+[data-theme="escuro"] textarea::placeholder {
+  color: #64748b;
+}
+
+/* Alerts */
+[data-theme="escuro"] .alert-success { background: #064e3b; color: #6ee7b7; border-color: #065f46; }
+[data-theme="escuro"] .alert-error   { background: #7f1d1d; color: #fca5a5; border-color: #991b1b; }
+[data-theme="escuro"] .alert-info    { background: #1e3a5f; color: #93c5fd; border-color: #1d4ed8; }
+[data-theme="escuro"] .alert-warning { background: #78350f; color: #fcd34d; border-color: #92400e; }
+
+/* Badges */
+[data-theme="escuro"] .badge-danger   { background: #7f1d1d; color: #fca5a5; }
+[data-theme="escuro"] .badge-warning  { background: #78350f; color: #fcd34d; }
+[data-theme="escuro"] .badge-info     { background: #1e3a5f; color: #93c5fd; }
+[data-theme="escuro"] .badge-success  { background: #064e3b; color: #6ee7b7; }
+[data-theme="escuro"] .badge-secondary{ background: #1e293b; color: #94a3b8; }
+
+/* User btn */
+[data-theme="escuro"] .user-btn {
+  border-color: #334155;
+  color: #f1f5f9;
+}
+[data-theme="escuro"] .user-btn:hover { background: #263449; }
+
+[data-theme="escuro"] .user-dropdown {
+  background: #1e293b;
+  border-color: #334155;
+}
+[data-theme="escuro"] .user-dropdown a { color: #f1f5f9; }
+[data-theme="escuro"] .user-dropdown a:hover { background: #263449; }
+
+/* btn-icon */
+[data-theme="escuro"] .btn-icon {
+  border-color: #334155;
+  color: #f1f5f9;
+}
+[data-theme="escuro"] .btn-icon:hover { background: #263449; }
+
+/* Hamburger */
+[data-theme="escuro"] .hamburger span { background: #f1f5f9; }
+
+/* Code editor */
+[data-theme="escuro"] .code-editor {
+  background: #0a1120;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+/* Stat card */
+[data-theme="escuro"] .stat-card {
+  border-color: #334155;
+}
+
+/* Progress bar track */
+[data-theme="escuro"] .progress-bar { background: #334155; }
+
+/* Section title */
+[data-theme="escuro"] .section-title { border-bottom-color: rgba(37,99,235,.3); }
+
+/* Nav links */
+[data-theme="escuro"] .main-nav a {
+  color: #94a3b8;
+}
+[data-theme="escuro"] .main-nav a:hover,
+[data-theme="escuro"] .main-nav a.active {
+  background: rgba(37,99,235,.2);
+  color: #93c5fd;
+}
+
+/* btn-outline */
+[data-theme="escuro"] .btn-outline {
+  color: #93c5fd;
+  border-color: #3b82f6;
+}
+[data-theme="escuro"] .btn-outline:hover {
+  background: rgba(37,99,235,.2);
+}
+
+/* Certificado */
+[data-theme="escuro"] .certificado-wrapper {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #3b82f6;
+}
+[data-theme="escuro"] .cert-body  { color: #cbd5e1; }
+[data-theme="escuro"] .cert-name  { color: #f1f5f9; border-bottom-color: #3b82f6; }
+[data-theme="escuro"] .cert-assinatura .linha { border-top-color: #94a3b8; }
+[data-theme="escuro"] .cert-assinatura p      { color: #94a3b8; }
+
+/* Transição suave para troca de tema */
+body, .site-header, .card, .card-header, .card-footer,
+input, select, textarea, .user-dropdown, .main-nav a,
+.badge, .alert, tbody tr {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
